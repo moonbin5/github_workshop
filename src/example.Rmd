@@ -36,6 +36,10 @@ Take 1 minute to
 
 ```{r}
 # Put your code here
+library(readr)
+library(tidyverse)
+OR <- read_csv(url("https://www.math.carleton.edu/ckelling/data_science/office_ratings.csv"))
+OR %>% summary()
 ```
 
 
