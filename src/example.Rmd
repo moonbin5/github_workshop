@@ -42,6 +42,13 @@ OR <- read_csv(url("https://www.math.carleton.edu/ckelling/data_science/office_r
 OR %>% summary()
 ```
 
+```{r proper analysis}
+# By season
+OR %>% group_by(season) %>% 
+  summarise(Average_rating = mean(imdb_rating))
+# What are the highest rated episodes?
+OR[order(OR$imdb_rating, decreasing = TRUE),]
+```
 
 ## Your turn 3
 
